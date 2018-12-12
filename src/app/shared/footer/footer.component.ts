@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { attachEmbeddedView } from '@angular/core/src/view';
+import { InfoPaginaService } from '../../services/info-pagina.service';
 
 @Component({
   selector: 'app-footer',
@@ -10,7 +11,7 @@ export class FooterComponent implements OnInit {
 
   anio: number = new Date().getUTCFullYear();
 
-  constructor() { }
+  constructor(public _servicio: InfoPaginaService) { }
 
   ngOnInit() {
   }
